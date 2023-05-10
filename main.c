@@ -3,6 +3,8 @@
 #include <stdbool.h>
 #include <string.h>
 
+#include "patterns.h"
+
 #define WIDTH 30
 #define HEIGHT 15
 
@@ -10,15 +12,6 @@
 #define DEAD '.'
 
 char field[HEIGHT*WIDTH];
-
-void toad(char *field, int position){
-    field[position] = ALIVE;
-    field[position+1] = ALIVE;
-    field[position+2] = ALIVE;
-    field[position+WIDTH-1] = ALIVE;
-    field[position+WIDTH] = ALIVE;
-    field[position+WIDTH+1] = ALIVE;
-}
 
 void field_init(char *field){
     for(int i = 0; i < WIDTH*HEIGHT; ++i){
@@ -77,7 +70,12 @@ void update_field(char *field){
 
 int main(){
     field_init(field);
-    toad(field, WIDTH*HEIGHT/2);
+
+    glider(field, WIDTH+3, WIDTH);
+
+    blinker(field, 4*WIDTH-10);
+
+    beehive(field, WIDTH*HEIGHT/2+WIDTH*3, WIDTH);   
 
     bool quit = false;
     while (!quit){
