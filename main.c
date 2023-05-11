@@ -71,11 +71,11 @@ void update_field(char *field){
 int main(){
     field_init(field);
 
-    glider(field, WIDTH+3, WIDTH);
+    //glider(field, WIDTH+3, WIDTH);
 
-    blinker(field, 4*WIDTH-10);
+    //blinker(field, 4*WIDTH-10);
 
-    beehive(field, WIDTH*HEIGHT/2+WIDTH*3, WIDTH);   
+    r_petromino(field, WIDTH*HEIGHT/2-5, WIDTH);   
 
     bool quit = false;
     while (!quit){

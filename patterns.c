@@ -46,10 +46,32 @@ void blinker(char *field, int position){
 }
 
 //// Spaceships
+
 void glider(char *field, int position, int width){
     field[position+1] = ALIVE;
     field[position+width+2] = ALIVE;
     field[position+2*width] = ALIVE;
     field[position+2*width+1] = ALIVE;
     field[position+2*width+2] = ALIVE;
+}
+
+void pentadecathlon(char *field, int position, int width){
+    field[position+2] = ALIVE;
+    field[position+7] = ALIVE;
+    for(int i = 0; i <= 9; ++i){
+        field[position+width+i] = ALIVE;
+    }
+    field[position+width+2] = DEAD;
+    field[position+width+7] = DEAD;
+    field[position+width*2+2] = ALIVE;
+    field[position+width*2+7] = ALIVE;
+}
+
+//// Other
+void r_petromino(char *field, int position, int width){
+    field[position+1] = ALIVE;
+    field[position+2] = ALIVE;
+    field[position+width] = ALIVE;
+    field[position+width+1] = ALIVE;
+    field[position+width*2+1] = ALIVE;
 }
