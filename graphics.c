@@ -3,7 +3,6 @@
 #include <SDL2/SDL_mouse.h>
 #include <stdbool.h>
 
-#include "global.h"
 #include "game.h"
 
 #define WINDOW_HEIGHT 768
