@@ -1,5 +1,14 @@
 # Simple Conway's Game of Life in C.
 
-Right now the game is functional but still has some errors.
-I'm still learning programming so I'm not sure if the way the code here is organized is good, so if you have suggestions or comments, please leave them in the Issues section.
-![Example gif](https://github.com/Eugen-str/game-of-life/blob/main/example.gif)
+Conway's game of life in C with SDL.
+
+Controls:
+
+- move around with arrow keys
+- zoom in / out by scrolling
+- \+ / - to speed up / slow down execution
+- pause with SPACE
+- quit with ESCAPE
+
+
+![Example gif](example.gif)

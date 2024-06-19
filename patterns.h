@@ -1,3 +1,5 @@
+#ifndef PATTERNS_H_
+#define PATTERNS_H_
 
 void block(char *field, int position, int width);
 void tub(char *field, int position, int width);
@@ -10,3 +12,5 @@ void glider(char *field, int position, int width);
 void pentadecathlon(char *field, int position, int width);
 
 void r_petromino(char *field, int position, int width);
+
+#endif //PATTERNS_H_
